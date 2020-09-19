@@ -1,0 +1,55 @@
+.welcome-background {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url("./img/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    background-position: center;
+}
+.covid-title {
+    position: fixed;
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    left: 50%;
+    top: 1%;
+    transform: translate(-50%);
+}
+
+.virus-svg-bottom {
+    position: fixed;
+    width: 45%;
+    left: -12%;
+    bottom: -25%;
+    z-index: -1;
+}
+
+.virus-svg-top {
+    position: fixed;
+    width: 45%;
+    right: -12%;
+    top: -30%;
+    z-index: -1;
+}
+
+
+@media screen and (max-width: 768px) {
+    .covid-title {
+        font-size: 160%;
+        left: 8%;
+        transform: translate(-5%, 15%);
+    }
+    .virus-svg-bottom {
+        position: fixed;
+        width: 100%;
+        left: -32%;
+        bottom: -20%;
+    }
+    .virus-svg-top {
+        position: fixed;
+        width: 100%;
+        right: -35%;
+        top: -25%;
+    }
+}

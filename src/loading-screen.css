@@ -1,0 +1,67 @@
+.loading-background {
+    position: fixed;
+    background-image: url("./img/loading.svg");
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.loading-virus {
+    position: fixed;
+    left: 50%;
+    width: 30%;
+    transform: translate(-50%);
+}
+.loading-label {
+    position: fixed;
+    top: 62%;
+    font-size: 300%;
+    color: orangered;
+    left: 50%;
+    transform: translate(-50%);
+}
+.wait-label {
+    position: fixed;
+    top: 77%;
+    font-size: 175%;
+    color: orangered;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+@media screen and (max-width: 768px) {
+    .loading-background {
+        position: fixed;
+        background-image: url("./img/loading.svg");
+        min-width: 100vh;
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 0%;
+    }
+    .loading-virus {
+        position: fixed;
+        top: 50%;
+        transform: translate(0%, -75%);
+        left: auto;
+        width: auto;
+    }
+    .loading-label {
+        position: fixed;
+        top: 60%;
+        font-size: 300%;
+        color: orangered;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .wait-label {
+        position: fixed;
+        top: 75%;
+        font-size: 175%;
+        color: orangered;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
