@@ -1,7 +1,6 @@
 import React from "react"
 import "./country-page.css"
 import "bulma/css/bulma.css"
-import back_arrow from "./img/back_arrow.svg"
 
 
 

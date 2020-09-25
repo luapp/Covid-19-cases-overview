@@ -26,3 +26,6 @@ yarn-error.log*
 /.firebase
 firebase.json
 .firebaserc
+
+#stable stuff
+read.md
