@@ -151,7 +151,7 @@ function General_page() {       // page mean the display square (box)
     const [loading, set_loading] = useState(true)                   //true >> loading is true
     const [loading_country_page, set_loading_country_page] = useState(true)
     const [loading_continents, set_loading_continents] = useState(true)
-    const [loading_countries_today, set_loading_countries_today] = useState(true)
+    const [loading_countries_today, set_loading_countries_today] = useState(true)       //ATTENTION!!! add to loading filter
     const [loading_continents_today, set_loading_continents_today] = useState(true)
     const [loading_countries_yesterday, set_loading_countries_yesterday] = useState(true)
     const [loading_continents_yesterday, set_loading_continents_yesterday] = useState(true)
@@ -210,11 +210,21 @@ function General_page() {       // page mean the display square (box)
 
 
     const fetch_specific_country = () => {
-        fetch(NovelCOVID_API__Specific_Countries)
-        .then(response_specific_countries => response_specific_countries.json())
-        .then(Set_Specific_Countries__Data)
-        .then(() => set_page_value("country_page"))
-        .finally(() => set_loading_country_page(false))
+
+        if (data_date_value === "today") {      //fix data reset to live on yesterday page after search on country page
+            fetch(NovelCOVID_API__Specific_Countries)
+            .then(response_specific_countries => response_specific_countries.json())
+            .then(Set_Specific_Countries__Data)
+            .then(() => set_page_value("country_page"))
+            .finally(() => set_loading_country_page(false))
+        }
+        else {
+            fetch(NovelCOVID_API__Specific_Countries__yesterday)
+            .then(response_specific_countries => response_specific_countries.json())
+            .then(Set_Specific_Countries__Data)
+            .then(() => set_page_value("country_page"))
+            .finally(() => set_loading_country_page(false))
+        }                                       // fix done up here ^^^
 
         fetch(NovelCOVID_API__Specific_Countries)
         .then(response_specific_countries => response_specific_countries.json())

@@ -1,0 +1,16 @@
+.body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.h1 {
+    position: relative;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%);
+}
+.h2 {
+    position: relative;
+    left: 0%;
+}

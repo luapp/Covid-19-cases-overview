@@ -8,7 +8,7 @@ function Country_page({country, cases, new_cases, deaths, new_deaths, active_cas
     return(
         <div className = "master-country-box">
             <div className = "country-div">
-                <label className = "country-label">{country}</label>
+                <label className = "country-label">{date} in {country}</label>
             </div>
             <div className = "columns is-mobile master-columns">
                 <div className = "column is-half cl-left">

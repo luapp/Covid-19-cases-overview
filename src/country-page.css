@@ -75,17 +75,16 @@
     
     .country-div {
         position: relative;
-        width: 100%;
-        height: 12%;
+        height: 15%;
+        display: flex;
     }
     .country-label {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -30%);
+        position: relative;
         font-size: xx-large;
         font-weight: 600;
         color: black;
+        display: flex;
+        justify-content: center;
     }
     
     .master-columns {
