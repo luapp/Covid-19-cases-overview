@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+//This app was created by Paul Le Gall
+//using create-react-app
+
 ReactDOM.render(
     <App />,
   document.getElementById('root')

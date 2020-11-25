@@ -1,28 +1,43 @@
 {
-  "name": "covid",
-  "version": "0.1.0",
+  "name": "covid-19",
+  "version": "0.8.0",
   "private": true,
-  "main": "./electron/main_electron.js",
+  "description": "This is a WebApp to get a overview of new daily cases of covid19",
+  "author": "Paul Le Gall",
+  "main": "./public/electron.js",
   "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "animejs": "^3.2.1",
     "bulma": "^0.9.1",
-    "electron-packager": "^15.1.0",
-    "novelcovid": "^3.0.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-screen-orientation": "0.0.4",
-    "react-scripts": "^4.0.0",
-    "react-scroll": "^1.8.1"
+    "react-scripts": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Creator-360/Covid-19-cases-overview.git"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron": "react-scripts build && electron .",
+    "electron-only": "electron .",
+    "build-windows": "react-scripts build && electron-packager.cmd ./ covid-19 --platform=win32 --arch=x64 --ignore=./node_modules --asar"
+  },
+  "build": {
+    "productName": "Covid-19",
+    "copyright": "Copyright © 2020 Paul Le Gall",
+    "win": {
+      "icon": "./src/img/virus_ico.png" 
+    },
+    "publish": [{
+      "provider": "github"
+    }]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,6 +55,10 @@
     ]
   },
   "devDependencies": {
-    "electron": "^10.1.5"
+    "electron": "^10.1.5",
+    "electron-builder": "^22.9.1",
+    "electron-installer-windows": "^3.0.0",
+    "electron-packager": "^15.1.0",
+    "electron-updater": "^4.3.5"
   }
 }
