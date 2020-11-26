@@ -4,6 +4,7 @@
   "private": true,
   "description": "This is a WebApp to get a overview of new daily cases of covid19",
   "author": "Paul Le Gall",
+  "license": "gpl-3.0",
   "main": "./public/electron.js",
   "homepage": "./",
   "dependencies": {
