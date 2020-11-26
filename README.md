@@ -9,6 +9,7 @@ Or scan the **QR code:**
 ![](https://raw.githubusercontent.com/Creator-360/Covid19App-BugTracker/master/qrcode.png)
 
 **Note:** Download the desktop app made with Electronjs are in the releases.
+
 **Note:** Please add to home screen if you are on mobile to use it as a native app.
 
 ## :beetle: BugTracker :beetle: & :bulb: suggestions :bulb:
