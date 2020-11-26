@@ -11,10 +11,11 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "bulma": "^0.9.1",
+    "electron-updater": "^4.3.5",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-screen-orientation": "0.0.4",
-    "react-scripts": "^4.0.0"
+    "react-scripts": "^4.0.1"
   },
   "repository": {
     "type": "git",
@@ -27,17 +28,19 @@
     "eject": "react-scripts eject",
     "electron": "react-scripts build && electron .",
     "electron-only": "electron .",
-    "build-windows": "react-scripts build && electron-packager.cmd ./ covid-19 --platform=win32 --arch=x64 --ignore=./node_modules --asar"
+    "build-windows": "react-scripts build && electron-builder.cmd --win --x64 --publish=always"
   },
   "build": {
     "productName": "Covid-19",
     "copyright": "Copyright © 2020 Paul Le Gall",
     "win": {
-      "icon": "./src/img/virus_ico.png" 
+      "icon": "./src/img/virus_ico.png"
     },
-    "publish": [{
-      "provider": "github"
-    }]
+    "publish": [
+      {
+        "provider": "github"
+      }
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -55,10 +58,9 @@
     ]
   },
   "devDependencies": {
-    "electron": "^10.1.5",
+    "electron": "^10.1.6",
     "electron-builder": "^22.9.1",
     "electron-installer-windows": "^3.0.0",
-    "electron-packager": "^15.1.0",
-    "electron-updater": "^4.3.5"
+    "electron-packager": "^15.1.0"
   }
 }
