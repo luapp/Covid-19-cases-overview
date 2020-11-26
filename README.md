@@ -8,7 +8,7 @@ This project is a Web application that allow the user to check daily cases and m
 Or scan the **QR code:**  
 ![](https://raw.githubusercontent.com/Creator-360/Covid19App-BugTracker/master/qrcode.png)
 
-**Note:** Download the desktop app made with Electronjs are in the releases.
+**Note:** Desktop app in the releases.
 
 **Note:** Please add to home screen if you are on mobile to use it as a native app.
 
@@ -21,6 +21,8 @@ Twitter: [paul_le_gall](https://twitter.com/paul_le_gall) :baby_chick:
 
 ### All covid-19 data come from disease-sh
 Github link: https://github.com/disease-sh/API
+
+## Screenshots:
 
 (*This project has been generated with "create-react-app")
 
