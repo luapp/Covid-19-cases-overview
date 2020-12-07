@@ -1,0 +1,27 @@
+.general-country-page {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.15);
+    width: 90vw;
+    border-radius: 35px;
+    border: none;
+    margin: 1em;
+}
+
+.general-country-name-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.general-country-name {
+    position: relative;
+    color: rgb(230, 230, 230);
+    margin: 0.5em;
+    left: 1%;
+}
+
+.general-country-widgets {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
