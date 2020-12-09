@@ -1,0 +1,26 @@
+.search-flex {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+}
+
+.search-icon {
+    position: relative;
+    height: 40%;
+    width: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.search-input {
+    position: relative;
+    height: 40%;
+    padding: 0;
+    border: none;
+    width: 80%;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 15px;
+}

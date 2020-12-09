@@ -38,6 +38,12 @@ function App() {
   const [Loading_Continents__yesterday, set_Loading_Continents__yesterday] = useState(true)
 
 
+  const [Page_value, set_Page_value] = useState("home")
+  const [Specific_country_data, set_Specific_country_data] = useState([])
+  const [Specific_country_data__yesterday, set_Specific_country_data__yesterday] = useState([])
+  const [date, set_date] = useState("today")
+
+
   const Fetch_All_Continents__today = async () => {
     const api_response = await fetch(NovelCOVID_API__All_Continents__today)
     const json = await api_response.json()
@@ -65,12 +71,19 @@ function App() {
     const json = await api_response.json()
     set_All_Countries__today(json)
   }
+  const Fetch_All_Countries__yesterday = async () => {
+    const api_response = await fetch(NovelCOVID_API__All_Countries__yesterday)
+    const json = await api_response.json()
+    set_All_Countries__yesterday(json)
+  }
 
   useEffect(() => {
     Fetch_All_Continents__today()
     Fetch_All_Continents__yesterday()
     Fetch_All_Countries__today()
+    Fetch_All_Countries__yesterday()
   }, [])
+
 
   return (
     <div className="App">
@@ -80,18 +93,31 @@ function App() {
       Worldwide_recovered__today = {Worldwide_recovered__today}
       Worldwide_todayCases__today = {Worldwide_todayCases__today}
       Worldwide_todayDeaths__today = {Worldwide_todayDeaths__today}
-
+  
       Worldwide_active__yesterday = {Worldwide_active__yesterday}
       Worldwide_cases__yesterday = {Worldwide_cases__yesterday}
       Worldwide_deaths__yesterday = {Worldwide_deaths__yesterday}
       Worldwide_recovered__yesterday = {Worldwide_recovered__yesterday}
       Worldwide_todayCases__yesterday = {Worldwide_todayCases__yesterday}
       Worldwide_todayDeaths__yesterday = {Worldwide_todayDeaths__yesterday}
-
+  
       All_Countries__today = {All_Countries__today}
+      All_Countries__yesterday = {All_Countries__yesterday}
+
+      set_Page_value = {set_Page_value}
+      Page_value = {Page_value}
+
+      set_Specific_country_data = {set_Specific_country_data}
+      Specific_country_data = {Specific_country_data}
+
+      date = {date}
+      set_date = {set_date}
+
+      set_Specific_country_data__yesterday = {set_Specific_country_data__yesterday}
+      Specific_country_data__yesterday = {Specific_country_data__yesterday}
       />
     </div>
-  );
+  )
 }
 
 export default App;

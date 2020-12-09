@@ -9,7 +9,7 @@ function New_deaths ({Worldwide_todayDeaths__today}) {
                 <h3 className = "title-h3">New deaths</h3>
             </div>
             <div className = "data-text-box">
-                <h2 className = "data-text">{Worldwide_todayDeaths__today}</h2>
+                <h2 className = "data-text">+{Worldwide_todayDeaths__today}</h2>
             </div>
         </div>
     )

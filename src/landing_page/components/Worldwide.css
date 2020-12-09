@@ -8,20 +8,12 @@
     margin-bottom: 3em;
 }
 
-.worldwide-title-div {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 .worldwide-title {
     position: relative;
     color: white;
-    margin: 0.5em;
-    left: 1%;
     user-select: none;
 }
+
 
 .widgets {
     position: relative;
@@ -33,35 +25,87 @@
     justify-content: space-evenly;
 }
 
-.date-bar {
+.header {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 23%;
-    height: 6vh;
-    background-color: rgba(0, 0, 0, 0.2);
-    flex-wrap: wrap;
-    margin: 1em;
-    border-radius: 15px;
 }
 
-.date-bar-flex {
+.header-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.search-flex {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+}
+
+.search-icon {
+    position: relative;
+    height: 40%;
+    width: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.search-input {
+    position: relative;
+    height: 40%;
+    padding: 0;
+    border: none;
+    width: 80%;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 15px;
+    font-size: larger;
+}
+
+.data-date-flex {
+    position: relative;
+    width: 22%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.date-box {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    position: relative;
+    height: 50%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
 }
 
-.today {
+.today-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.yesterday-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.yesterday-text {
     margin: 0;
-    color: rgb(250, 250, 250);
+    color: white;
     user-select: none;
 }
-
-.yesterday {
+.today-text {
     margin: 0;
-    color: rgb(250, 250, 250);
+    color: white;
     user-select: none;
 }

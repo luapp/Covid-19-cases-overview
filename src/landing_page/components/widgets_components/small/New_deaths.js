@@ -9,7 +9,7 @@ function New_deaths ({new_deaths}) {
                 <h3 className = "title-h3">New deaths</h3>
             </div>
             <div className = "data-text-box-general-country">
-                <h2 className = "data-text-general-country">{new_deaths}</h2>
+                <h2 className = "data-text-general-country">+{new_deaths}</h2>
             </div>
         </div>
     )
