@@ -47,6 +47,12 @@ function Country ({
         }
     }
 
+    const key_event = e => {
+        if (e.key === "Enter") {
+            Fetch_specific()
+        }
+    }
+
     const back_to_home = () => {
         set_Page_value("home")
     }
@@ -97,7 +103,7 @@ function Country ({
                     </div>
                     <h1 className = "country-name">{Specific_country_data.country}</h1>
                     <div className = "search-flex">
-                        <input className = "search-input" placeholder = "  Search a country..." onChange = {search_event} value = {search}></input>
+                        <input className = "search-input" placeholder = "  Search a country..." onChange = {search_event} value = {search} onKeyPress = {key_event}></input>
                         <img className = "search-icon" src = {search_icon} onClick = {Fetch_specific}></img>
                     </div>
                     <div className = "data-date-flex">

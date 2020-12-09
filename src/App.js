@@ -23,6 +23,8 @@ function App() {
   const [Worldwide_recovered__today, set_Worldwide_recovered__today] = useState([])
   const [Worldwide_todayCases__today, set_Worldwide_todayCases__today] = useState([])
   const [Worldwide_todayDeaths__today, set_Worldwide_todayDeaths__today] = useState([])
+  const [Worldwide_tests__today, set_Worldwide_tests__today] = useState([])
+  const [Worldwide_todayRecovered__today, set_Worldwide_todayRecovered__today] = useState([])
 
   const [Worldwide_active__yesterday, set_Worldwide_active__yesterday] = useState([])
   const [Worldwide_cases__yesterday, set_Worldwide_cases__yesterday] = useState([])
@@ -30,6 +32,8 @@ function App() {
   const [Worldwide_recovered__yesterday, set_Worldwide_recovered__yesterday] = useState([])
   const [Worldwide_todayCases__yesterday, set_Worldwide_todayCases__yesterday] = useState([])
   const [Worldwide_todayDeaths__yesterday, set_Worldwide_todayDeaths__yesterday] = useState([])
+  const [Worldwide_tests__yesterday, set_Worldwide_tests__yesterday] = useState([])
+  const [Worldwide_todayRecovered__yesterday, set_Worldwide_todayRecovered__yesterday] = useState([])
 
 
   const [Loading_Countries__today, set_Loading_Countries__today] = useState(true)
@@ -43,6 +47,9 @@ function App() {
   const [Specific_country_data__yesterday, set_Specific_country_data__yesterday] = useState([])
   const [date, set_date] = useState("today")
 
+  const [today_date_selection, set_today_date_selection] = useState("orangered")
+  const [yesterday_date_selection, set_yesterday_date_selection] = useState("white")
+
 
   const Fetch_All_Continents__today = async () => {
     const api_response = await fetch(NovelCOVID_API__All_Continents__today)
@@ -54,6 +61,8 @@ function App() {
     set_Worldwide_recovered__today(json[0].recovered + json[1].recovered + json[2].recovered + json[3].recovered + json[4].recovered + json[5].recovered)
     set_Worldwide_todayCases__today(json[0].todayCases + json[1].todayCases + json[2].todayCases + json[3].todayCases + json[4].todayCases + json[5].todayCases)
     set_Worldwide_todayDeaths__today(json[0].todayDeaths + json[1].todayDeaths + json[2].todayDeaths + json[3].todayDeaths + json[4].todayDeaths + json[5].todayDeaths)
+    set_Worldwide_todayRecovered__today(json[0].todayRecovered + json[1].todayRecovered + json[2].todayRecovered + json[3].todayRecovered + json[4].todayRecovered + json[5].todayRecovered)
+    set_Worldwide_tests__today(json[0].tests + json[1].tests + json[2].tests + json[3].tests + json[4].tests + json[5].tests)
   }
   const Fetch_All_Continents__yesterday = async () => {
     const api_response = await fetch(NovelCOVID_API__All_Continents__yesterday)
@@ -65,6 +74,8 @@ function App() {
     set_Worldwide_recovered__yesterday(json[0].recovered + json[1].recovered + json[2].recovered + json[3].recovered + json[4].recovered + json[5].recovered)
     set_Worldwide_todayCases__yesterday(json[0].todayCases + json[1].todayCases + json[2].todayCases + json[3].todayCases + json[4].todayCases + json[5].todayCases)
     set_Worldwide_todayDeaths__yesterday(json[0].todayDeaths + json[1].todayDeaths + json[2].todayDeaths + json[3].todayDeaths + json[4].todayDeaths + json[5].todayDeaths)
+    set_Worldwide_todayRecovered__yesterday(json[0].todayRecovered + json[1].todayRecovered + json[2].todayRecovered + json[3].todayRecovered + json[4].todayRecovered + json[5].todayRecovered)
+    set_Worldwide_tests__yesterday(json[0].tests + json[1].tests + json[2].tests + json[3].tests + json[4].tests + json[5].tests)
   }
   const Fetch_All_Countries__today = async () => {
     const api_response = await fetch(NovelCOVID_API__All_Countries__today)
@@ -93,6 +104,8 @@ function App() {
       Worldwide_recovered__today = {Worldwide_recovered__today}
       Worldwide_todayCases__today = {Worldwide_todayCases__today}
       Worldwide_todayDeaths__today = {Worldwide_todayDeaths__today}
+      Worldwide_tests__today = {Worldwide_tests__today}
+      Worldwide_todayRecovered__today = {Worldwide_todayRecovered__today}
   
       Worldwide_active__yesterday = {Worldwide_active__yesterday}
       Worldwide_cases__yesterday = {Worldwide_cases__yesterday}
@@ -100,6 +113,8 @@ function App() {
       Worldwide_recovered__yesterday = {Worldwide_recovered__yesterday}
       Worldwide_todayCases__yesterday = {Worldwide_todayCases__yesterday}
       Worldwide_todayDeaths__yesterday = {Worldwide_todayDeaths__yesterday}
+      Worldwide_tests__yesterday = {Worldwide_tests__yesterday}
+      Worldwide_todayRecovered__yesterday = {Worldwide_todayRecovered__yesterday}
   
       All_Countries__today = {All_Countries__today}
       All_Countries__yesterday = {All_Countries__yesterday}
@@ -115,6 +130,11 @@ function App() {
 
       set_Specific_country_data__yesterday = {set_Specific_country_data__yesterday}
       Specific_country_data__yesterday = {Specific_country_data__yesterday}
+
+      today_date_selection = {today_date_selection}
+      set_today_date_selection = {set_today_date_selection}
+      yesterday_date_selection = {yesterday_date_selection}
+      set_yesterday_date_selection = {set_yesterday_date_selection}
       />
     </div>
   )

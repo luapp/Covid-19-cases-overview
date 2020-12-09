@@ -11,7 +11,7 @@ import Tested from "../widgets_components/small/Tested"
 
 
 
-function General_country_page ({country, active, new_cases, cases, new_deaths, deaths, recovered}) {
+function General_country_page ({country, active, new_cases, cases, new_deaths, deaths, recovered, new_recovered, tests}) {
     return(
         <div className = "general-country-page">
             <div className = "general-country-name-box">
@@ -23,9 +23,9 @@ function General_country_page ({country, active, new_cases, cases, new_deaths, d
                 <New_deaths new_deaths = {new_deaths}/>
                 <Deaths deaths = {deaths}/>
                 <Active active = {active}/>
-                <New_recovered/>
+                <New_recovered new_recovered= {new_recovered}/>
                 <Recovered recovered = {recovered}/>
-                <Tested/>
+                <Tested tests= {tests}/>
             </div>
         </div>
     )

@@ -19,6 +19,8 @@ function Worldwide ({
     Worldwide_recovered__today,
     Worldwide_todayCases__today,
     Worldwide_todayDeaths__today,
+    Worldwide_todayRecovered__today,
+    Worldwide_tests__today,
     set_Page_value,
     set_Specific_country_data,
     date,
@@ -28,7 +30,13 @@ function Worldwide ({
     Worldwide_deaths__yesterday,
     Worldwide_recovered__yesterday,
     Worldwide_todayCases__yesterday,
-    Worldwide_todayDeaths__yesterday
+    Worldwide_todayDeaths__yesterday,
+    Worldwide_todayRecovered__yesterday,
+    Worldwide_tests__yesterday,
+    today_date_selection,
+    set_today_date_selection,
+    yesterday_date_selection,
+    set_yesterday_date_selection
 }) {
 
     const [search, set_search] = useState("")
@@ -41,9 +49,13 @@ function Worldwide ({
 
     const set_today = () => {
         set_date("today")
+        set_today_date_selection("orangered")
+        set_yesterday_date_selection("white")
     }
     const set_yesterday = () => {
         set_date("yesterday")
+        set_today_date_selection("white")
+        set_yesterday_date_selection("orangered")
     }
 
     const Fetch_specific = async () => {
@@ -58,6 +70,12 @@ function Worldwide ({
         }
     }
 
+    const key_event = e => {
+        if (e.key === "Enter") {
+            Fetch_specific()
+        }
+    }
+
     const widgets = () => {
         if (date === "today") {
             return(
@@ -67,9 +85,9 @@ function Worldwide ({
                     <New_deaths Worldwide_todayDeaths__today = {Worldwide_todayDeaths__today}/>
                     <Deaths Worldwide_deaths__today = {Worldwide_deaths__today}/>
                     <Active Worldwide_active__today = {Worldwide_active__today}/>
-                    <New_recovered/>
+                    <New_recovered Worldwide_todayRecovered__today = {Worldwide_todayRecovered__today}/>
                     <Recovered Worldwide_recovered__today = {Worldwide_recovered__today}/>
-                    <Tested/>
+                    <Tested Worldwide_tests__today = {Worldwide_tests__today}/>
                 </div>
             )
         }
@@ -81,9 +99,9 @@ function Worldwide ({
                     <New_deaths Worldwide_todayDeaths__today = {Worldwide_todayDeaths__yesterday}/>
                     <Deaths Worldwide_deaths__today = {Worldwide_deaths__yesterday}/>
                     <Active Worldwide_active__today = {Worldwide_active__yesterday}/>
-                    <New_recovered/>
+                    <New_recovered Worldwide_todayRecovered__today = {Worldwide_todayRecovered__yesterday}/>
                     <Recovered Worldwide_recovered__today = {Worldwide_recovered__yesterday}/>
-                    <Tested/>
+                    <Tested Worldwide_tests__today = {Worldwide_tests__yesterday}/>
                 </div>
             )
         }
@@ -96,16 +114,16 @@ function Worldwide ({
                 <div className = "header-flex">
                     <h1 className = "worldwide-title">Worldwide</h1>
                     <div className = "search-flex">
-                        <input className = "search-input" placeholder = "  Search a country..." onChange = {search_event} value = {search}></input>
+                        <input className = "search-input" placeholder = "  Search a country..." onChange = {search_event} value = {search} onKeyPress = {key_event}></input>
                         <img className = "search-icon" src = {search_icon} onClick = {Fetch_specific}></img>
                     </div>
                     <div className = "data-date-flex">
                         <div className = "date-box">
                             <div className = "today-box">
-                                <h2 className = "today-text" onClick = {set_today}>Today</h2>
+                                <h2 className = "today-text" onClick = {set_today} style = {{color: today_date_selection}}>Today</h2>
                             </div>
                             <div className = "yesterday-box">
-                                <h2 className = "yesterday-text" onClick = {set_yesterday}>Yesterday</h2>
+                                <h2 className = "yesterday-text" onClick = {set_yesterday} style = {{color: yesterday_date_selection}}>Yesterday</h2>
                             </div>
                         </div>
                     </div>
