@@ -90,6 +90,7 @@ function Home ({
 
                             set_Page_value = {set_Page_value}
                             set_Specific_country_data = {set_Specific_country_data}
+                            set_Specific_country_data__yesterday = {set_Specific_country_data__yesterday}
 
                             date = {date}
                             set_date = {set_date}

@@ -23,6 +23,7 @@ function Worldwide ({
     Worldwide_tests__today,
     set_Page_value,
     set_Specific_country_data,
+    set_Specific_country_data__yesterday,
     date,
     set_date,
     Worldwide_active__yesterday,
@@ -42,6 +43,7 @@ function Worldwide ({
     const [search, set_search] = useState("")
     
     const SpecificAPI = "https://corona.lmao.ninja/v2/countries/" + search + "?yesterday=false&strict=false&query"
+    const SpecificAPI_yesterday = "https://corona.lmao.ninja/v2/countries/" + search + "?yesterday=true&strict=false&query"
 
     const search_event = e => {
         set_search(e.target.value)
@@ -61,8 +63,11 @@ function Worldwide ({
     const Fetch_specific = async () => {
         if (search !== "") {
             const api_response = await fetch(SpecificAPI)
+            const api_response_yesterday = await fetch(SpecificAPI_yesterday)
+            const json_yesterday = await api_response_yesterday.json()
             const json = await api_response.json()
             set_Specific_country_data(json)
+            set_Specific_country_data__yesterday(json_yesterday)
             set_Page_value("country")
         }
         else {

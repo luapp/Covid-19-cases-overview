@@ -20,7 +20,11 @@ function Country ({
     date, 
     set_date,
     set_Specific_country_data__yesterday,
-    Specific_country_data__yesterday
+    Specific_country_data__yesterday,
+    today_date_selection,
+    set_today_date_selection,
+    yesterday_date_selection,
+    set_yesterday_date_selection
 }) {
 
     const [search, set_search] = useState("")
@@ -33,19 +37,19 @@ function Country ({
     }
 
     const Fetch_specific = async () => {
-        if (search !== "") {
+        if (search !== ""){
             const api_response = await fetch(SpecificAPI)
-            const json = await api_response.json()
             const api_response_yesterday = await fetch(SpecificAPI__yesterday)
+            const json = await api_response.json()
             const json_yesterday = await api_response_yesterday.json()
             set_Specific_country_data(json)
-            set_Specific_country_data__yesterday(json_yesterday)
-            console.log(json_yesterday)
+            set_Specific_country_data__yesterday(json_yesterday)    
         }
         else {
-            window.alert("Your searh bar is empty !")
+            window.alert("Search box is empty !")
         }
     }
+
 
     const key_event = e => {
         if (e.key === "Enter") {
@@ -58,9 +62,13 @@ function Country ({
     }
     const set_today = () => {
         set_date("today")
+        set_today_date_selection("orangered")
+        set_yesterday_date_selection("white")
     }
     const set_yesterday = () => {
         set_date("yesterday")
+        set_today_date_selection("white")
+        set_yesterday_date_selection("orangered")
     }
 
     const country_date_selection = () => {
@@ -72,9 +80,9 @@ function Country ({
                     <New_deaths new_deaths = {Specific_country_data.todayDeaths}/>
                     <Deaths deaths = {Specific_country_data.deaths}/>
                     <Active active = {Specific_country_data.active}/>
-                    <New_recovered/>
+                    <New_recovered new_recovered = {Specific_country_data.todayRecovered}/>
                     <Recovered recovered = {Specific_country_data.recovered}/>
-                    <Tested/>
+                    <Tested tests = {Specific_country_data.tests}/>
                 </div>
             )
         }
@@ -86,9 +94,9 @@ function Country ({
                     <New_deaths new_deaths = {Specific_country_data__yesterday.todayDeaths}/>
                     <Deaths deaths = {Specific_country_data__yesterday.deaths}/>
                     <Active active = {Specific_country_data__yesterday.active}/>
-                    <New_recovered/>
+                    <New_recovered new_recovered = {Specific_country_data__yesterday.todayRecovered}/>
                     <Recovered recovered = {Specific_country_data__yesterday.recovered}/>
-                    <Tested/>
+                    <Tested tests = {Specific_country_data__yesterday.tests}/>
                 </div>
             )
         }
@@ -109,10 +117,10 @@ function Country ({
                     <div className = "data-date-flex">
                         <div className = "date-box">
                             <div className = "today-box">
-                                <h2 className = "today-text" onClick = {set_today}>Today</h2>
+                                <h2 className = "today-text" onClick = {set_today} style = {{color: today_date_selection}}>Today</h2>
                             </div>
                             <div className = "yesterday-box">
-                                <h2 className = "yesterday-text" onClick = {set_yesterday}>Yesterday</h2>
+                                <h2 className = "yesterday-text" onClick = {set_yesterday} style = {{color: yesterday_date_selection}}>Yesterday</h2>
                             </div>
                         </div>
                     </div>

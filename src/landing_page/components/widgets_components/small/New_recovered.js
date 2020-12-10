@@ -9,7 +9,7 @@ function New_recovered ({new_recovered}) {
                 <h3 className = "title-h3">New recovered</h3>
             </div>
             <div className = "data-text-box-general-country">
-                <h2 className = "data-text-general-country">{new_recovered}</h2>
+                <h2 className = "data-text-general-country">+{new_recovered}</h2>
             </div>
         </div>
     )
