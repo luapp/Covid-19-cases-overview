@@ -1,0 +1,28 @@
+.background {
+    position: relative;
+    background-color:  #2a3f54;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.arrow-flex {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.back-arrow {
+    position: relative;
+    height: 35%;
+    width: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
+    user-select: none;
+}
+
+.country-name {
+    position: relative;
+    color: white;
+    user-select: none;
+}

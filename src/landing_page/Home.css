@@ -1,0 +1,39 @@
+.background {
+    position: relative;
+    background-color:  #2a3f54;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.title-box {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.title {
+    position: relative;
+    color: white;
+    user-select: none;
+    margin-bottom: 0.8em;
+}
+
+.worldwide {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.country {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.country-row {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
