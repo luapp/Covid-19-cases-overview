@@ -3,6 +3,7 @@ import "./Home.css"
 import Worldwide from "./components/Worldwide"
 import General_country_page from "./components/country_components/General_country_page"
 import Country from "./components/country_components/Country"
+import virus from "../img/virus.svg"
 
 
 function Home ({
@@ -63,7 +64,6 @@ function Home ({
         }
     }
     
-    console.log(Page_value)
     const Page_selection = () => {
         if (Page_value === "home") {
             return(
@@ -130,6 +130,8 @@ function Home ({
 
     return(
         <div className = "background">
+            <img src = {virus} className = "virus-background virus-01"></img>
+            <img src = {virus} className = "virus-background virus-02"></img>
             <div className = "title-box">
                 <h1 className = "title">Covid-19 cases overview</h1>
             </div>

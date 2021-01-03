@@ -1,6 +1,6 @@
 .worldwide-background {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.38);
     height: 75%;
     width: 90%;
     border-radius: 35px;
@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .header {
@@ -85,7 +85,7 @@
     position: relative;
     height: 50%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.35);
     border-radius: 30px;
 }
 
@@ -109,4 +109,93 @@
     margin: 0;
     color: orangered;
     user-select: none;
+}
+
+@media screen and (max-width: 1023px) {
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .header-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+    .search-flex {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 80%;
+    }
+    
+    .search-icon {
+        position: relative;
+        height: 85%;
+        width: 40px;
+        top: 50%;
+        transform: translate(0, -50%);
+        user-select: none;
+    }
+    
+    .search-input {
+        position: relative;
+        height: 80%;
+        padding: 0;
+        border: none;
+        width: 80%;
+        top: 50%;
+        transform: translate(0, -50%);
+        border-radius: 15px;
+        font-size: larger;
+    }
+
+    .data-date-flex {
+        position: relative;
+        width: 80%;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 1.2em;
+    }
+    
+    .date-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 30px;
+    }
+    
+    .today-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .yesterday-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .yesterday-text {
+        margin: 0.3em;
+        color: white;
+        user-select: none;
+    }
+    .today-text {
+        margin: 0.3em;
+        color: orangered;
+        user-select: none;
+    }
 }

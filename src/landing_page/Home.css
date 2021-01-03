@@ -1,8 +1,13 @@
 .background {
     position: relative;
-    background-color:  #2a3f54;
+    background-image: url("../img/background.svg");
+    background-attachment: fixed;
+    background-size: cover;
     min-height: 100vh;
     min-width: 100vw;
+}
+.backup-css {
+    background-color: #2A3F54;
 }
 
 .title-box {
@@ -36,4 +41,41 @@
     position: relative;
     display: flex;
     flex-direction: column;
+}
+
+.virus-background {
+    position: fixed;
+    user-select: none;
+    
+}
+.virus-01 {
+    height: 75vh;
+    left: -180px;
+    top: -160px;
+}
+.virus-02 {
+    height: 75vh;
+    right: -200px;
+    bottom: -180px;
+}
+
+@media screen and (max-width: 1023px) {
+    .title {
+        font-size: xx-large;
+    }
+}
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: x-large;
+    }
+    .virus-01 {
+        height: 35vh;
+        left: -120px;
+        top: -100px;
+    }
+    .virus-02 {
+        height: 35vh;
+        right: -120px;
+        bottom: -110px;
+    }
 }
