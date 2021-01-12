@@ -25,6 +25,7 @@ Github link: https://github.com/disease-sh/API
 ## Screenshots:
 
 ![](https://raw.githubusercontent.com/Creator-360/Covid-19-cases-overview/master/readme%20img/screenshot%204.png)
+![](https://raw.githubusercontent.com/Creator-360/Covid-19-cases-overview/master/readme%20img/screenshot%205.jpeg)
 
 
 (*This project has been generated with "create-react-app")
