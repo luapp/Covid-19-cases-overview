@@ -54,6 +54,7 @@
     top: 50%;
     transform: translate(0, -50%);
     user-select: none;
+    margin-left: 0.75em;
 }
 
 .search-input {
@@ -197,5 +198,11 @@
         margin: 0.3em;
         color: orangered;
         user-select: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-icon {
+        margin-left: 0.35em;
     }
 }

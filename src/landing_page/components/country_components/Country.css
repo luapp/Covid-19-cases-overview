@@ -26,3 +26,20 @@
     color: white;
     user-select: none;
 }
+
+@media screen and (max-width: 1023px) {
+    .arrow-flex {
+        position: absolute;
+        transform: translate(0, 50%);
+        left: 3%;
+    }
+    .back-arrow {
+        top: 0;
+        transform: translate(0);
+
+    }
+    .country-name {
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+    }
+}
