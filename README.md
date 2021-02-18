@@ -6,7 +6,7 @@ This project is a Web application that allow the user to check daily cases and m
 
 **URL:** _https://covid-19-cases-overview.web.app_  
 Or scan the **QR code:**  
-![](https://raw.githubusercontent.com/Creator-360/Covid-19-cases-overview/master/readme%20img/qrcode.png)
+![](https://raw.githubusercontent.com/luapp/Covid-19-cases-overview/master/readme%20img/qrcode.png)
 
 **Note:** Desktop app in the releases.
 
@@ -24,8 +24,8 @@ Github link: https://github.com/disease-sh/API
 
 ## Screenshots:
 
-![](https://raw.githubusercontent.com/Creator-360/Covid-19-cases-overview/master/readme%20img/screenshot%204.png)
-![](https://raw.githubusercontent.com/Creator-360/Covid-19-cases-overview/master/readme%20img/screenshot%206.jpeg)
+![](https://raw.githubusercontent.com/luapp/Covid-19-cases-overview/master/readme%20img/screenshot%204.png)
+![](https://raw.githubusercontent.com/luapp/Covid-19-cases-overview/master/readme%20img/screenshot%206.jpeg)
 
 
 (*This project has been generated with "create-react-app")
